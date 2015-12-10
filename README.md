@@ -2,12 +2,13 @@
 Mode Laravel
 
 ## Fitur 
-## Frontend ##
+### Frontend
 Unknown
 
-## Backend ##
+### Backend
 
 Fitur:
+
 1. Dashboard
 2. New Post				#done
 3. Post					#done
