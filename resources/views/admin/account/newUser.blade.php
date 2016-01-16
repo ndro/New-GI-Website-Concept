@@ -30,7 +30,7 @@
 	</h1>
 	<ol class="breadcrumb">
 		<li><i class="fa fa-dashboard"></i>  <a href="{{ action('AdminController@getIndex') }}">Dashboard</a></li>
-		<li><a href="#">Management Account</a></li>
+		<li><a href="{{ action('AdminController@getAll') }}">Management Account</a></li>
 		<li class="active">New User</li>
 	</ol>
 </section>
@@ -69,6 +69,7 @@
 
 						<div class="box-footer">
 							<button type="submit" class="btn btn-primary">Submit</button>
+							<a href="{{ action('AdminController@getAll') }}" class="btn btn-default">Cancel</a>
 						</div>
 					</form>
 				</div><!-- /.box -->

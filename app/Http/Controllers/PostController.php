@@ -200,7 +200,7 @@ class PostController extends Controller {
 	}
 	
 	/**
-	 * Restored post from trash
+	 * Publish post
 	 */
 	public function getPublish($id)
 	{
@@ -213,7 +213,7 @@ class PostController extends Controller {
 	}
 	
 	/**
-	 * Restored post from trash
+	 * Unpublish post
 	 */
 	public function getUnpublish($id)
 	{

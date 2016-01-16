@@ -23,4 +23,5 @@ Route::controllers([
 	'post' => 'PostController',
 	'category' => 'CategoryController',
 	'event' => 'EventController',
+	'search' => 'SearchController',
 ]);

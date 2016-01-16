@@ -102,10 +102,11 @@
 									<a href="{{ action('AdminController@getEdit') }}/{{ $d_user->id }}">
                                         <i class="fa fa-edit"></i> Edit
                                     </a> &nbsp;&nbsp;
+									@if($i!=1)
 									<a href="{{ action('AdminController@getDelete') }}/{{ $d_user->id }}">
                                         <i class="fa fa-trash-o"></i> Delete
                                     </a>
-									
+									@endif
 								</td>
 							</tr>
 							{{--*/ $i++ /*--}}

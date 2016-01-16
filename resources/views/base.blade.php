@@ -240,12 +240,14 @@
 							</li>
 						</ul>
 					</li>
-					<li class="dropdown user user-menu">
-						<a href="{{ action('AdminController@getAll') }}" class="dropdown-toggle">
-							<i class="fa fa-user"></i>
-							Management Account
-						</a>
-					</li>
+					<!-- penambahan menu management account
+						<li class="dropdown user user-menu">
+							<a href="{{ action('AdminController@getAll') }}" class="dropdown-toggle">
+								<i class="fa fa-user"></i>
+								Management Account
+							</a>
+						</li>
+					-->
 					<!-- User Account: style can be found in dropdown.less -->
 					<li class="dropdown user user-menu">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -255,28 +257,16 @@
 						<ul class="dropdown-menu">
 							<!-- User image -->
 							<li class="user-header bg-light-blue">
-								<img src="{{ asset('/img/user.jpg') }}" class="img-circle" alt="User Image"/>
+								<img src="{{ asset('/img/200.jpg') }}" class="img-circle" alt="User Image"/>
 								<p>
-									{{ $user }} - Web Developer
-									<small>Member since Nov. 2012</small>
+									{{ $user }} - Gebrak Indonesia
+									<small>copyright@2015</small>
 								</p>
-							</li>
-							<!-- Menu Body -->
-							<li class="user-body">
-								<div class="col-xs-4 text-center">
-									<a href="#">Followers</a>
-								</div>
-								<div class="col-xs-4 text-center">
-									<a href="#">Sales</a>
-								</div>
-								<div class="col-xs-4 text-center">
-									<a href="#">Friends</a>
-								</div>
 							</li>
 							<!-- Menu Footer-->
 							<li class="user-footer">
 								<div class="pull-left">
-									<a href="#" class="btn btn-default btn-flat">Profile</a>
+									<a href="{{ action('AdminController@getAll') }}" class="btn btn-default btn-flat">Management Account</a>
 								</div>
 								<div class="pull-right">
 									<a href="{{ action('Auth\AuthController@getLogout') }}">Sign out</a>
@@ -305,9 +295,10 @@
 					</div>
 				</div>
 				<!-- search form -->
-				<form action="#" method="get" class="sidebar-form">
+				<form action="{{ action('SearchController@postSearch') }}" method="post" class="sidebar-form">
+					<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 					<div class="input-group">
-						<input type="text" name="q" class="form-control" placeholder="Search Event..."/>
+						<input type="text" name="post-search" class="form-control" placeholder="Search Published Post..."/>
 						<span class="input-group-btn">
 							<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
 						</span>
