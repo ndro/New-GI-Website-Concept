@@ -14,7 +14,11 @@ class DatabaseSeeder extends Seeder {
 	{
 		Model::unguard();
 
-		// $this->call('UserTableSeeder');
+		DB::table('users')->insert([
+            'name' => 'gebrak',
+            'email' => 'gebrak@gmail.com',
+            'password' => Hash::make('gebrak'),
+            ]);
 	}
 
 }

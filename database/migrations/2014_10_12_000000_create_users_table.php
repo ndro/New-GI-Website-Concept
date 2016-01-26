@@ -22,9 +22,6 @@ class CreateUsersTable extends Migration {
 			$table->rememberToken();
 			$table->timestamps();
 		});
-		
-		DB::table('users')->delete();
-        User::create(['email' => 'gebrak@gmail.com', 'name'=>'Gebrak', 'password'=>Hash::make('gebrak')]);
 	}
 
 	/**
