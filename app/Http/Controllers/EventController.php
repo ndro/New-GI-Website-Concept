@@ -176,4 +176,11 @@ class EventController extends Controller {
 		return redirect('event/detail/'.$id.'/unpublished')->with('success', true);
 	}
 
+	public function getCalendar()
+	{
+		$events = Event::with('get_category')->where('is_published', '=', 1)->get();
+		
+		return view('admin/event/calendar',array('user'=>$this->username, 'nav_event'=>'', 'nav_pub_event'=>'', 'events'=>$events));
+	}
+
 }
