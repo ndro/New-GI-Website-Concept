@@ -46,30 +46,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Gebrak Indonesia</a>
+                <a class="navbar-brand" href="{{ action('HomeController@getIndex') }}">Gebrak Indonesia</a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Berita</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#event">Acara</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">Tentang</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#contact">Donasi</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>

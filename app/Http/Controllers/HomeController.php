@@ -27,6 +27,21 @@ class HomeController extends Controller {
 		return view('home');
 	}
 
+	/**
+		* Show all posts
+	*/	
+	public function getPosts()
+	{
+		return view('news');
+	}
+
+	/**
+		* Show all events
+	*/	
+	public function getEvents()
+	{
+		return view('events');
+	}
 
 	/**
 	 * Display the specified news.

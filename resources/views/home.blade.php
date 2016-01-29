@@ -127,7 +127,7 @@
 				</a>
 			</div>
 			<div class="col-sm-12 text-center" >
-				<a href="#" class="btn btn-success btn-lg">Lihat Semua Berita</a>
+				<a href="{{ action('HomeController@getPosts') }}" class="btn btn-success btn-lg">Lihat Semua Berita</a>
 			</div>
 		</div>
 	</div>
@@ -138,252 +138,106 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>Acara</h2>
-				<!-- <hr class="star-light"> -->
-			</div>
-			<div class="col-lg-12">
-				<div id="carousel-year" class="carousel slide" data-ride="carousel">
-				  <!-- Indicators -->
-				  <ol class="carousel-indicators indicators-year">
-					<li data-target="#carousel-year" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-year" data-slide-to="1"></li>
-				  </ol>
-
-				  <!-- Wrapper for slides -->
-				  <div class="carousel-inner" role="listbox">
-					<div class="item active">
-					  <!-- <img src="img/portfolio/safe.png" alt="..."> -->
-					  <div class="carousel-caption caption-year">
-						<h3>2015</h3>
-						<br><br>
-						<div id="carousel-month-2015" class="carousel slide carousel-month" data-ride="carousel">
-						  <!-- Indicators -->
-						  <ol class="carousel-indicators indicators-month">
-							<li data-target="#carousel-month-2015" data-slide-to="0" class="active">Jan</li>
-							<li data-target="#carousel-month-2015" data-slide-to="1">Feb</li>
-							<li data-target="#carousel-month-2015" data-slide-to="2">Mar</li>
-							<li data-target="#carousel-month-2015" data-slide-to="3">Apr</li>
-							<li data-target="#carousel-month-2015" data-slide-to="4">Mei</li>
-							<li data-target="#carousel-month-2015" data-slide-to="5">Jun</li>
-							<li data-target="#carousel-month-2015" data-slide-to="6">Jul</li>
-							<li data-target="#carousel-month-2015" data-slide-to="7">Aug</li>
-							<li data-target="#carousel-month-2015" data-slide-to="8">Sep</li>
-							<li data-target="#carousel-month-2015" data-slide-to="9">Okt</li>
-							<li data-target="#carousel-month-2015" data-slide-to="10">Nov</li>
-							<li data-target="#carousel-month-2015" data-slide-to="11">Des</li>
-						  </ol>
-						  <hr class="month-line">
-						  <!-- Wrapper for slides -->
-						  <div class="carousel-inner" role="listbox">
-							<div class="item active">
-							  <!-- <img src="img/portfolio/safe.png" alt="..."> -->
-							  <div class="carousel-caption caption-month">
-
-								<div id="carousel-day-2015-1" class="carousel slide carousel-day" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#carousel-day-2015-1" data-slide-to="0" class="active"></li>
-									<li data-target="#carousel-day-2015-1" data-slide-to="1"></li>
-								  </ol>
-
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" role="listbox">
-									<div class="item active">
-									  <!-- <img src="img/portfolio/safe.png" alt="..."> -->
-									  <div class="carousel-caption caption-day">
-										<h3>Event 1</h3>
-										<div class="text-center" >
-											<a href="all-news.html" class="btn btn-success btn-lg">Baca</a>
-										</div>
-									  </div>
-									</div>
-									<div class="item">
-									  <!-- <img src="img/portfolio/cabin.png" alt="..."> -->
-									  <div class="carousel-caption caption-day">
-										<h3>Event 2</h3>
-										<div class="text-center" >
-											<a href="all-news.html" class="btn btn-success btn-lg">Baca</a>
-										</div>
-									  </div>
-									</div>
-								  </div>
-
-								  <!-- Controls -->
-								  <a class="left carousel-control control-day" href="#carousel-day-2015-1" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control control-day" href="#carousel-day-2015-1" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-
-							  </div>
-							</div>
-							<div class="item">
-							  <!-- <img src="img/portfolio/cabin.png" alt="..."> -->
-							  <div class="carousel-caption caption-month">
-								<div id="carousel-day-2015-2" class="carousel slide carousel-day" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#carousel-day-2015-2" data-slide-to="0" class="active"></li>
-									<li data-target="#carousel-day-2015-2" data-slide-to="1"></li>
-								  </ol>
-
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" role="listbox">
-									<div class="item active">
-									  <!-- <img src="img/portfolio/safe.png" alt="..."> -->
-									  <div class="carousel-caption caption-day">
-										<h3>Event 1</h3>
-										<div class="text-center" >
-											<a href="all-news.html" class="btn btn-success btn-lg">Baca</a>
-										</div>
-									  </div>
-									</div>
-									<div class="item">
-									  <!-- <img src="img/portfolio/cabin.png" alt="..."> -->
-									  <div class="carousel-caption caption-day">
-										<h3>Event 2</h3>
-										<div class="text-center" >
-											<a href="all-news.html" class="btn btn-success btn-lg">Baca</a>
-										</div>
-									  </div>
-									</div>
-								  </div>
-
-								  <!-- Controls -->
-								  <a class="left carousel-control control-day" href="#carousel-day-2015-2" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control control-day" href="#carousel-day-2015-2" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-							  </div>
-							</div>
-						  </div>
-
-						  <!-- Controls -->
-						  <a class="left carousel-control control-month" href="#carousel-month-2015" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						  </a>
-						  <a class="right carousel-control control-month" href="#carousel-month-2015" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						  </a>
-						</div>
-					  </div>
-					</div>
-					<div class="item">
-					  <!-- <img src="img/portfolio/cabin.png" alt="..."> -->
-					  <div class="carousel-caption caption-year">
-						<h3>2016</h3>
-						<br><br>
-						<div id="carousel-month-2016" class="carousel slide carousel-month" data-ride="carousel">
-						  <!-- Indicators -->
-						  <ol class="carousel-indicators indicators-month">
-							<li data-target="#carousel-month-2016" data-slide-to="0" class="active">Jan</li>
-							<li data-target="#carousel-month-2016" data-slide-to="1">Feb</li>
-							<li data-target="#carousel-month-2016" data-slide-to="2">Mar</li>
-							<li data-target="#carousel-month-2016" data-slide-to="3">Apr</li>
-							<li data-target="#carousel-month-2016" data-slide-to="4">Mei</li>
-							<li data-target="#carousel-month-2016" data-slide-to="5">Jun</li>
-							<li data-target="#carousel-month-2016" data-slide-to="6">Jul</li>
-							<li data-target="#carousel-month-2016" data-slide-to="7">Aug</li>
-							<li data-target="#carousel-month-2016" data-slide-to="8">Sep</li>
-							<li data-target="#carousel-month-2016" data-slide-to="9">Okt</li>
-							<li data-target="#carousel-month-2016" data-slide-to="10">Nov</li>
-							<li data-target="#carousel-month-2016" data-slide-to="11">Des</li>
-						  </ol>
-						  <hr class="month-line">
-						  <!-- Wrapper for slides -->
-						  <div class="carousel-inner" role="listbox">
-							<div class="item active">
-							  <!-- <img src="img/portfolio/safe.png" alt="..."> -->
-							  <div class="carousel-caption caption-month">
-
-								<div id="carousel-day-2016-1" class="carousel slide carousel-day" data-ride="carousel">
-								  <!-- Indicators -->
-								  <ol class="carousel-indicators">
-									<li data-target="#carousel-day-2016-1" data-slide-to="0" class="active"></li>
-									<li data-target="#carousel-day-2016-1" data-slide-to="1"></li>
-								  </ol>
-
-								  <!-- Wrapper for slides -->
-								  <div class="carousel-inner" role="listbox">
-									<div class="item active">
-									  <!-- <img src="img/portfolio/safe.png" alt="..."> -->
-									  <div class="carousel-caption caption-day">
-										<h3>Event 1</h3>
-										<div class="text-center" >
-											<a href="all-news.html" class="btn btn-success btn-lg">Baca</a>
-										</div>
-									  </div>
-									</div>
-									<div class="item">
-									  <!-- <img src="img/portfolio/cabin.png" alt="..."> -->
-									  <div class="carousel-caption caption-day">
-										<h3>Event 2</h3>
-										<div class="text-center" >
-											<a href="all-news.html" class="btn btn-success btn-lg">Baca</a>
-										</div>
-									  </div>
-									</div>
-								  </div>
-
-								  <!-- Controls -->
-								  <a class="left carousel-control control-day" href="#carousel-day-2016-1" role="button" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-									<span class="sr-only">Previous</span>
-								  </a>
-								  <a class="right carousel-control control-day" href="#carousel-day-2016-1" role="button" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									<span class="sr-only">Next</span>
-								  </a>
-								</div>
-
-							  </div>
-							</div>
-							<div class="item">
-							  <!-- <img src="img/portfolio/cabin.png" alt="..."> -->
-							  <div class="carousel-caption caption-month">
-								<h3>2016</h3>
-							  </div>
-							</div>
-						  </div>
-
-						  <!-- Controls -->
-						  <a class="left carousel-control control-month" href="#carousel-month-2016" role="button" data-slide="prev">
-							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							<span class="sr-only">Previous</span>
-						  </a>
-						  <a class="right carousel-control control-month" href="#carousel-month-2016" role="button" data-slide="next">
-							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-							<span class="sr-only">Next</span>
-						  </a>
-						</div>
-					  </div>
-					</div>
-				  </div>
-
-				  <!-- Controls -->
-				  <a class="left carousel-control control-year" href="#carousel-year" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				  </a>
-				  <a class="right carousel-control control-year" href="#carousel-year" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				  </a>
-				</div>
+				<h2>Event</h2>
+				<!-- <hr class="star-primary"> -->
+				<br><br><br>
 			</div>
 		</div>
-		<br>
+		<div class="row">
+			<div class="col-sm-6 portfolio-item">
+				<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+						</div>
+					</div>
+					<img src="{{ asset('/img/portfolio/cabin.png') }}" class="img-responsive" alt=""/>
+					<div class="item-detail">
+						<h3>Judul Acara</h3>
+						<h4>xx-Agustus-2015</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 portfolio-item">
+				<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+						</div>
+					</div>
+					<img src="{{ asset('/img/portfolio/cake.png') }}" class="img-responsive" alt=""/>
+					<div class="item-detail">
+						<h3>Judul Acara</h3>
+						<h4>xx-Agustus-2015</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 portfolio-item">
+				<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+						</div>
+					</div>
+					<img src="{{ asset('/img/portfolio/circus.png') }}" class="img-responsive" alt=""/>
+					<div class="item-detail">
+						<h3>Judul Acara</h3>
+						<h4>xx-Agustus-2015</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 portfolio-item">
+				<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+						</div>
+					</div>
+					<img src="{{ asset('/img/portfolio/game.png') }}" class="img-responsive" alt=""/>
+					<div class="item-detail">
+						<h3>Judul Acara</h3>
+						<h4>xx-Agustus-2015</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 portfolio-item">
+				<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+						</div>
+					</div>
+					<img src="{{ asset('/img/portfolio/safe.png') }}" class="img-responsive" alt=""/>
+					<div class="item-detail">
+						<h3>Judul Acara</h3>
+						<h4>xx-Agustus-2015</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-6 portfolio-item">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+						</div>
+					</div>
+					<img src="{{ asset('/img/portfolio/submarine.png') }}" class="img-responsive" alt=""/>
+					<div class="item-detail">
+						<h3>Judul Acara</h3>
+						<h4>xx-Agustus-2015</h4>
+					</div>
+				</a>
+			</div>
+			<div class="col-sm-12 text-center" >
+				<a href="{{ action('HomeController@getEvents') }}" class="btn btn-success btn-lg">Lihat Semua Event</a>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -596,3 +450,4 @@
 	</div>
 </section>
 @endsection
+
