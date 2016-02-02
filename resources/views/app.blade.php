@@ -30,11 +30,9 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -146,7 +144,7 @@
                             <h2>Project Title</h2>
                             <hr class="star-primary">
                             <img src="{{ asset('/img/portfolio/cabin.png') }}" class="img-responsive img-centered" alt="no-image">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <p></p>
                             <ul class="list-inline item-details">
                                 <li>Client:
                                     <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
@@ -179,6 +177,8 @@
 	<script src="{{ asset('/js/classie.js') }}"></script>
 	<script src="{{ asset('/js/cbpAnimatedHeader.js') }}"></script>
 	
+    <!-- Custom Javasript -->
+    <script src="{{ asset('/js/gebrakindo.js') }}"></script>
 
     <!-- Contact Form JavaScript -->
 	<script src="{{ asset('/js/jqBootstrapValidation.js') }}"></script>

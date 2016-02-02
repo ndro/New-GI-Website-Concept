@@ -2,6 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Post;
+use App\Category;
 
 use Illuminate\Http\Request;
 
@@ -24,7 +26,9 @@ class HomeController extends Controller {
 	 */
 	public function getIndex()
 	{
-		return view('home');
+		$post = Post::with('get_category')->where('is_published', '=', 1)->get();
+		
+		return view('home',array('posts'=>$post));
 	}
 
 	/**
@@ -52,6 +56,13 @@ class HomeController extends Controller {
 	public function getShow($id)
 	{
 		//
+	}
+
+	public function getPublishedPost()
+	{
+		$post = Post::with('get_category')->where('is_published', '=', 1)->get();
+		
+		return view('home',array('posts'=>$post));
 	}
 
 }
