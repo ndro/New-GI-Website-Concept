@@ -15,6 +15,9 @@
 
 Route::get('/', 'HomeController@getIndex');
 
+Route::get('/home/posts', 'HomeController@getPublishedPost');
+Route::get('/home/events', 'HomeController@getPublishedEvent');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

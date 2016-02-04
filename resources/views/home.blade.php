@@ -38,11 +38,11 @@
 		<div class="row">
 			@foreach($posts as $post)
 			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" data-title="{{ $post->title }}" data-content="{% $post->long_desc %}">
+				<a href="{{ action('HomeController@getNewsDetail') }}/{{ $post->id }}" class="portfolio-link" data-toggle="modal">
 					<div class="caption">
-						<div class="caption-content" id="news">
+						<div class="caption-content">
 							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							{!! $post->long_desc !!}
+							{{ $post->short_desc }}
 						</div>
 					</div>
 					<img src="{{ asset('/img/portfolio/cabin.png') }}" class="img-responsive" alt=""/>
@@ -71,96 +71,22 @@
 			</div>
 		</div>
 		<div class="row">
+			@foreach($events as $event)
 			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+				<a href="{{ action('HomeController@getEventDetail') }}/{{ $event->id }}" class="portfolio-link" data-toggle="modal">
 					<div class="caption">
 						<div class="caption-content">
-							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
+							{{ $event->short_desc }}
 						</div>
 					</div>
 					<img src="{{ asset('/img/portfolio/cabin.png') }}" class="img-responsive" alt=""/>
 					<div class="item-detail">
-						<h3>Judul Acara</h3>
-						<h4>xx-Agustus-2015</h4>
+						<h3>{{ $event->title }}</h3>
+						<h4>{{ $event->start_datetime }}</h4>
 					</div>
 				</a>
 			</div>
-			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-					<div class="caption">
-						<div class="caption-content">
-							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
-						</div>
-					</div>
-					<img src="{{ asset('/img/portfolio/cake.png') }}" class="img-responsive" alt=""/>
-					<div class="item-detail">
-						<h3>Judul Acara</h3>
-						<h4>xx-Agustus-2015</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-					<div class="caption">
-						<div class="caption-content">
-							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
-						</div>
-					</div>
-					<img src="{{ asset('/img/portfolio/circus.png') }}" class="img-responsive" alt=""/>
-					<div class="item-detail">
-						<h3>Judul Acara</h3>
-						<h4>xx-Agustus-2015</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-					<div class="caption">
-						<div class="caption-content">
-							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
-						</div>
-					</div>
-					<img src="{{ asset('/img/portfolio/game.png') }}" class="img-responsive" alt=""/>
-					<div class="item-detail">
-						<h3>Judul Acara</h3>
-						<h4>xx-Agustus-2015</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-					<div class="caption">
-						<div class="caption-content">
-							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
-						</div>
-					</div>
-					<img src="{{ asset('/img/portfolio/safe.png') }}" class="img-responsive" alt=""/>
-					<div class="item-detail">
-						<h3>Judul Acara</h3>
-						<h4>xx-Agustus-2015</h4>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-6 portfolio-item">
-				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-					<div class="caption">
-						<div class="caption-content">
-							<!-- <i class="fa fa-search-plus fa-3x"></i> -->
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus beatae, nostrum cumque esse ratione maxime, voluptatum suscipit incidunt maiores nesciunt obcaecati debitis, laborum eius quos. Nemo dignissimos animi tempore obcaecati!
-						</div>
-					</div>
-					<img src="{{ asset('/img/portfolio/submarine.png') }}" class="img-responsive" alt=""/>
-					<div class="item-detail">
-						<h3>Judul Acara</h3>
-						<h4>xx-Agustus-2015</h4>
-					</div>
-				</a>
-			</div>
+			@endforeach
 			<div class="col-sm-12 text-center" >
 				<a href="{{ action('HomeController@getEvents') }}" class="btn btn-success btn-lg">Lihat Semua Event</a>
 			</div>
